@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <title>Calculadora Flask</title>
+</head>
+<body>
+    <h1>Calculadora Simple</h1>
+    <form method="post">
+        <input type="number" name="num1" step="any" required>
+        <select name="operation">
+            <option value="suma">+</option>
+            <option value="resta">-</option>
+            <option value="multiplicación">*</option>
+            <option value="división">/</option>
+        </select>
+        <input type="numero" name="num2" step="any" required>
+        <button type="submit">Calcular</button>
+    </form>
+
+    {% if result is not none %}
+        <h2>Resultado: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
